@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+p {
+    color: hsl(240, 1%, 28%);
+}
+
+body {
+    height:100vh;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+
+}
+
+
+main {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 8rem;
+
+}
+
+/* ========== */
+/* Image section */
+/* =========== */
+
+.img__holder {
+    position: relative;
+    left: 20px;
+}
+
+
+.mobile__illustration {
+    position: absolute;
+    width: 290px;
+    top: -120px;
+    left: 20px;
+}
+
+
+.mobile__bg {
+    position: absolute;
+    top: 20px;
+    left: 45px;
+}
+
+.desktop__illustration,
+.desktop__bg,
+.desktop__box {
+    display: none;
+}
+
+
+.container__card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-inline: auto;
+    padding: 1em 1.5em;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    box-shadow: 0 10px 50px rgb(12, 10, 10);
+}
+
+
+.container__faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-block-end: 1.5em;
+    margin-block-start: 8rem;
+    max-width: 350px;
+}
+
+
+.container__faq h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+article {
+    padding-block: 1.5em;
+    cursor: pointer;
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    display: none;
+    color:hsl(240, 1%, 47%);
+    padding-top: 1em;
+}
+
+.rotate {
+   rotate: 180deg;
+}
+
+.display {
+    display: block;
+}
+
+@media (min-width:45em) {
+
+    .container__card {
+        overflow: hidden;
+    }
+
+    .container__faq {
+        width: 50%;
+        align-self: flex-end;
+       margin-inline-end: 5rem;
+       gap: 1em;
+        
+        
+    }
+
+    .container__faq h1 {
+        text-align: left;
+    }
+
+    .mobile__bg,
+    .mobile__illustration {
+        display: none;
+    }
+
+    .desktop__illustration,
+    .desktop__box,
+    .desktop__bg {
+        display: block;
+        position: absolute;
+    }
+
+    .desktop__illustration {
+        left: -100px;
+        top: 140px;
+    }
+
+    .desktop__box {
+        left: -100px;
+        top: 300px;
+        z-index: 11;
+        overflow: visible;
+    }
+
+    .desktop__bg {
+        width: 600px;
+        left: -200px;
+        
+    }
+
+}
